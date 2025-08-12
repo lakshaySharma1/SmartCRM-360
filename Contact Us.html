@@ -1,104 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - SmartCRM 360</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - SmartCRM 360</title>
+<style>
+    /* Reset & font */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-        /* Dark overlay for visibility */
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0, 0, 0, 0.65);
-            z-index: 1;
-        }
+    body {
+        background: url('https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d') no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+    }
 
-        .container {
-            position: relative;
-            z-index: 2;
-            max-width: 420px;
-            width: 100%;
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            backdrop-filter: blur(15px);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-            color: white;
-            text-align: center;
-        }
+    .contact-container {
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(15px);
+        border-radius: 20px;
+        padding: 40px;
+        width: 100%;
+        max-width: 500px;
+        color: white;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    }
 
-        .logo {
-            width: 80px;
-            height: 80px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            display: inline-block;
-            margin-bottom: 10px;
-        }
+    .logo {
+        text-align: center;
+        margin-bottom: 20px;
+    }
 
-        h2 {
-            margin-bottom: 20px;
-            font-size: 24px;
-            letter-spacing: 1px;
-        }
+    .logo img {
+        max-width: 80px;
+        display: block;
+        margin: 0 auto;
+    }
 
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            margin: 8px 0;
-            border: none;
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.15);
-            color: white;
-            font-size: 14px;
-            backdrop-filter: blur(5px);
-        }
+    .logo h1 {
+        font-size: 1.8rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
 
-        input::placeholder, textarea::placeholder {
-            color: rgba(255, 255, 255, 0.8);
-        }
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+    }
 
-        button {
-            width: 100%;
-            padding: 12px;
-            border: none;
-            border-radius: 8px;
-            background: linear-gradient(135deg, #00c6ff, #0072ff);
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+    label {
+        display: block;
+        margin-top: 15px;
+        font-weight: 500;
+    }
 
-        button:hover {
-            background: linear-gradient(135deg, #0072ff, #00c6ff);
-        }
-    </style>
+    input[type="text"],
+    input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: none;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.15);
+        color: white;
+        outline: none;
+        font-size: 1rem;
+    }
+
+    input::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    input[type="submit"] {
+        margin-top: 20px;
+        width: 100%;
+        padding: 12px;
+        background: linear-gradient(135deg, #00b4db, #0083b0);
+        border: none;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+        transition: transform 0.2s ease, background 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+        transform: scale(1.02);
+        background: linear-gradient(135deg, #0083b0, #00b4db);
+    }
+
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">LOGO</div>
-        <h2>Contact Us - SmartCRM 360</h2>
-        <form action="YOUR_WEB_TO_LEAD_URL" method="POST">
-            <input type="text" name="first_name" placeholder="First Name" required>
-            <input type="text" name="last_name" placeholder="Last Name" required>
-            <input type="email" name="email" placeholder="Email Address" required>
-            <input type="text" name="company" placeholder="Company Name">
-            <textarea name="description" placeholder="Your Message" rows="4"></textarea>
-            <button type="submit">Submit</button>
-        </form>
+
+<div class="contact-container">
+    <div class="logo">
+        <img src="YOUR_LOGO_IMAGE_PATH.png" alt="SmartCRM 360 Logo">
+        <h1>SmartCRM 360</h1>
     </div>
+    <h2>Contact Us</h2>
+
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DdM00000ZGmW0" method="POST">
+        <input type="hidden" name="oid" value="00DdM00000ZGmW0">
+        <input type="hidden" name="retURL" value="https://www.google.com/">
+        
+        <!-- Hidden Lead Status -->
+        <input type="hidden" name="lead_status" value="New">
+
+        <label for="first_name">First Name</label>
+        <input id="first_name" maxlength="40" name="first_name" type="text" placeholder="Enter your first name" required>
+
+        <label for="last_name">Last Name</label>
+        <input id="last_name" maxlength="80" name="last_name" type="text" placeholder="Enter your last name" required>
+
+        <label for="email">Email</label>
+        <input id="email" maxlength="80" name="email" type="email" placeholder="Enter your email" required>
+
+        <label for="company">Company</label>
+        <input id="company" maxlength="40" name="company" type="text" placeholder="Your company name">
+
+        <label for="city">City</label>
+        <input id="city" maxlength="40" name="city" type="text" placeholder="City">
+
+        <label for="state">State/Province</label>
+        <input id="state" maxlength="20" name="state" type="text" placeholder="State or Province">
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
 </body>
 </html>
